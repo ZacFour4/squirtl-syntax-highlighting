@@ -1,6 +1,6 @@
 # README
 
-A simple syntax highlighting extension for SQuirtl - an RDF query language designed as to query .ttl files.
+A simple syntax highlighting extension for SQuirtl - an RDF query language designed to query .ttl files.
 
 ## Features
 
