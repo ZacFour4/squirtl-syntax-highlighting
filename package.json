@@ -1,0 +1,25 @@
+{
+  "name": "squirtl-syntax-highlighting",
+  "displayName": "SQuirtl syntax highlighting",
+  "description": "A syntax highlighter for SQuirtl",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "squirtl",
+      "aliases": ["SQuirtl", "squirtl"],
+      "extensions": [".rql"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "squirtl",
+      "scopeName": "source.squirtl",
+      "path": "./syntaxes/squirtl.tmLanguage.json"
+    }]
+  }
+}
