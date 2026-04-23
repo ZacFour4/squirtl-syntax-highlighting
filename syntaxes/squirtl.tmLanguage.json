@@ -30,7 +30,7 @@
 	"keywords": {
 	"patterns": [
 		{
-		"match": "\\b(SELECT|GROUP|USING|WHERE|JOIN|SELFJOIN|ON|UNION|INTERSECTION|DIFFERENCE)\\b",
+		"match": "\\b(SELECT|GROUP|USING|WHERE|JOIN|SELFJOIN|ON|UNION|INTERSECTION|DIFFERENCE|SORT|UNIQUE)\\b",
 		"name": "keyword.control.squirtl"
 		},
 		{
@@ -48,8 +48,7 @@
 		"name": "string.quoted.double.squirtl"
 		},
 		{
-		"begin": "<",
-		"end": ">",
+		"match": "<[a-zA-Z][^\\s<>]*>",
 		"name": "string.quoted.single.squirtl"
 		}
 	]
