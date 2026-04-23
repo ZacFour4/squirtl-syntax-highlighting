@@ -9,6 +9,7 @@
 	{ "include": "#types" },
 	{ "include": "#variables" },
 	{ "include": "#operators" },
+	{ "include": "#directives" },
 	{ "include": "#uris" }
 ],
 "repository": {
@@ -29,7 +30,7 @@
 	"keywords": {
 	"patterns": [
 		{
-		"match": "\\b(SELECT|GROUP|USING|WHERE|JOIN|SELFJOIN|ON|UNION)\\b",
+		"match": "\\b(SELECT|GROUP|USING|WHERE|JOIN|SELFJOIN|ON|UNION|INTERSECTION|DIFFERENCE)\\b",
 		"name": "keyword.control.squirtl"
 		},
 		{
@@ -66,7 +67,7 @@
 	"functions": {
 	"patterns": [
 		{
-		"match": "\\b(NOT|AND|XOR|OR|MAX|SUM|MIN|AVG|COUNT|COUNTDISTINCT|PARITY|MODULO|SQUARE|TO_STRING|TO_INT|TO_URI|EXTEND_URI|POW|DIV|CONCAT|LENGTH|SUBSTRING|UPPER|LOWER|TRIM|CONTAINS|STARTSWITH|ENDSWITH)\\b",
+		"match": "\\b(NOT|AND|XOR|OR|MAX|IS|SUM|MIN|AVG|COUNT|COUNTDISTINCT|PARITY|MODULO|SQUARE|TO_STRING|TO_INT|TO_URI|EXTEND_URI|POW|DIV|CONCAT|LENGTH|SUBSTRING|UPPER|LOWER|TRIM|CONTAINS|STARTSWITH|ENDSWITH)\\b",
 		"name": "entity.name.function.squirtl"
 		}
 	]
@@ -84,7 +85,7 @@
 	"variables": {
 	"patterns": [
 		{
-		"match": "\\b\\??(subject|object|predicate)\\b",
+		"match": "\\b\\?(subject|object|predicate)\\b",
 		"name": "variable.language.squirtl"
 		},
 		{
@@ -116,6 +117,14 @@
 			"match": "\\b[a-zA-Z0-9_./-]+\\.ttl\\b",
 			"name": "entity.name.filename.squirtl"
 		}]
-	}
+	},
+	"directives": {
+    "patterns": [
+        {
+            "match": "^%.*$",
+            "name": "meta.preprocessor.squirtl"
+        }
+    ]
+}
 }
 }
